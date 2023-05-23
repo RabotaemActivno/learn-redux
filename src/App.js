@@ -1,6 +1,7 @@
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCustomerAction, removeCustomerAction } from './store/customerReducer';
+import { fetchCustomers } from './asyncActions/customers';
 
 function App() {
   const dispatch = useDispatch()
@@ -38,6 +39,9 @@ function App() {
         </div>
         <div className='wrapper__btn'>
           <button onClick={() => addCustomer(prompt())} type="button" className="btn btn-primary">Добавить клиента</button>
+        </div>
+        <div className='wrapper__btn'>
+          <button onClick={() => dispatch(fetchCustomers())} type="button" className="btn btn-primary">Добавить клиентов из базы</button>
         </div>
         {customers.length > 0 ?
           <ul className='list-group'>
