@@ -7,11 +7,21 @@
 .btn {
   margin: 5px;
 }
+.wrapper__btn{
+  text-align: center;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
 }
 .cash__label{
   text-align: center;
-  font-size: 5rem;
+  font-size: 3rem;
+}
+.cust {
+  font-size: 2rem;
+}
+.list-group-item{
+  display: flex;
+  justify-content: space-between;
 }
